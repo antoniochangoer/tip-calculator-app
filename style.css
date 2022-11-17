@@ -1,0 +1,75 @@
+:root {
+  --green-500: #c5e4e7;
+  --green-600: #26c2ae;
+  --green-700: #00474b;
+  --white: #ffffff;
+
+  --fs-l: 4rem;
+  --fs-r: 2.4rem;
+  --fs-s: 1.6rem;
+  --fs-xs: 1.3rem;
+
+  --fs-btn: 2rem;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Style start */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--green-500);
+  font-size: var(--fs-r);
+}
