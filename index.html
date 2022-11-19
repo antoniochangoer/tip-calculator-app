@@ -33,12 +33,15 @@
                 <button class="calculator__btn">15%</button>
                 <button class="calculator__btn">25%</button>
                 <button class="calculator__btn">50%</button>
-                <input type="number" placeholder="Custom" />
+                <input class="custom" type="number" placeholder="Custom" />
               </div>
             </div>
             <label class="people-label">
-              <span class="calculator__input-title">Number of People</span>
-              <input class="bill" type="number" placeholder="0" />
+              <div class="row">
+                <span class="calculator__input-title">Number of People</span>
+                <span class="error-msg">Can't be zero</span>
+              </div>
+              <input class="people" type="number" placeholder="0" />
             </label>
           </div>
           <div class="col calculator__total">
@@ -47,14 +50,14 @@
                 <p class="calculator__tip-amount-title">Tip Amount</p>
                 <sub>/ person</sub>
               </div>
-              <p class="calculator__tip-amount">$0.00</p>
+              <p class="calculator__tip-amount tip-amount">$0.00</p>
             </div>
             <div class="row">
               <div class="col">
                 <p class="calculator__tip-amount-title">Total</p>
                 <sub>/ person</sub>
               </div>
-              <p class="calculator__tip-amount">$0.00</p>
+              <p class="calculator__tip-amount total-amount">$0.00</p>
             </div>
             <button class="btn-reset">Reset</button>
           </div>

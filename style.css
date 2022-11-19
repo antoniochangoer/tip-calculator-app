@@ -137,6 +137,7 @@ input {
   background-color: #f3f9fa;
   font-size: var(--fs-r);
   text-align: right;
+  color: var(--green-700);
 }
 
 input::placeholder {
@@ -160,6 +161,26 @@ input::placeholder {
   left: 16px;
   background: url('./images/icon-dollar.svg');
   background-repeat: no-repeat;
+}
+
+/* error for number of people input */
+.people-label .row {
+  justify-content: space-between;
+}
+
+.error-msg {
+  margin-bottom: 0.6rem;
+  color: #e17457;
+}
+
+.error,
+.error:focus-visible {
+  outline: #e17457 1px solid;
+}
+
+.error-msg {
+  /* hidden by default */
+  display: none;
 }
 
 .people-label::before {
@@ -211,10 +232,15 @@ input::placeholder {
   transition: all 0.1s ease-in;
 }
 
+.active-btn {
+  color: var(--green-700);
+  background-color: var(--green-600);
+}
+
 .calculator__btn:hover,
 .calculator__btn:active {
   color: var(--green-700);
-  background-color: var(--green-600);
+  background-color: #9fe8df;
 }
 
 .calculator__total {
@@ -257,13 +283,23 @@ input::placeholder {
 
 .active {
   cursor: pointer;
+  pointer-events: auto;
   background-color: #26c2ae;
+}
+
+.active:hover {
+  color: var(--green-700);
+  background-color: #9fe8df;
 }
 
 @media (min-width: 90em) {
   main {
     max-width: 92rem;
     margin-inline: auto;
+  }
+
+  button {
+    font-size: var(--fs-r);
   }
 
   .content {
@@ -286,6 +322,11 @@ input::placeholder {
     max-width: 37.9rem;
   }
 
+  .bill:focus-visible,
+  .custom:focus-visible {
+    outline: 1px solid var(--green-600);
+  }
+
   .calculator__total {
     max-width: 41.3rem;
     margin-top: 0;
@@ -304,6 +345,7 @@ input::placeholder {
   }
 
   .btn-reset {
+    font-size: var(--fs-btn);
     margin-top: auto;
   }
 }
