@@ -104,6 +104,7 @@ body {
 }
 
 main {
+  padding-top: 5rem;
 }
 
 .content {
@@ -294,6 +295,7 @@ input::placeholder {
 
 @media (min-width: 90em) {
   main {
+    padding-top: 0;
     max-width: 92rem;
     margin-inline: auto;
   }
